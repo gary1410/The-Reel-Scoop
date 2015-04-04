@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20150403224234) do
 
   create_table "movies", force: :cascade do |t|
     t.string   "title"
-    t.string   "genre",             default: [], array: true
+    t.string   "genres",            default: [], array: true
     t.integer  "rotten_id"
     t.string   "imdb_id"
     t.string   "mob_poster_url"

@@ -2,7 +2,7 @@ class CreateMovies < ActiveRecord::Migration
   def change
     create_table :movies do |t|
       t.string  :title
-      t.string :genre, array: true, default: []
+      t.string :genres, array: true, default: []
       t.integer :rotten_id
       t.string  :imdb_id
       t.string  :mob_poster_url

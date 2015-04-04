@@ -22,7 +22,7 @@ namespace :db do
 
       new_movie.update_attributes({
         title:              rt_movie_data.title.titleize,
-        genre:              rt_movie_data.genre,
+        genres:              rt_movie_data.genres,
         imdb_id:            imdb_id,
         mob_poster_url:     mob_poster_url,
         det_poster_url:     det_poster_url,
@@ -32,6 +32,7 @@ namespace :db do
         synopsis:           rt_movie_data.synopsis,
         runtime:            rt_movie_data.runtime,
         release_date:       release_date
+        releast_status:     "limited"
       })
     end
 
@@ -52,7 +53,7 @@ namespace :db do
 
       new_movie.update_attributes({
         title:              rt_movie_data.title.titleize,
-        genre:              rt_movie_data.genre,
+        genres:              rt_movie_data.genres,
         imdb_id:            imdb_id,
         mob_poster_url:     mob_poster_url,
         det_poster_url:     det_poster_url,
@@ -62,6 +63,7 @@ namespace :db do
         synopsis:           rt_movie_data.synopsis,
         runtime:            rt_movie_data.runtime,
         release_date:       release_date
+        releaste_status:    "limited"
       })
     end
 
@@ -79,7 +81,7 @@ namespace :db do
 
       new_movie.update_attributes({
         title:              rt_movie_data.title.titleize,
-        genre:              rt_movie_data.genre,
+        genres:              rt_movie_data.genres,
         imdb_id:            imdb_id,
         mob_poster_url:     mob_poster_url,
         det_poster_url:     det_poster_url,
@@ -89,6 +91,7 @@ namespace :db do
         synopsis:           rt_movie_data.synopsis,
         runtime:            rt_movie_data.runtime,
         release_date:       release_date
+        release_status:     "wide"
       })
     end
   end
