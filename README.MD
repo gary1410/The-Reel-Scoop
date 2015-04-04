@@ -1,4 +1,4 @@
-The Reel Scoop
+:movie_camera: The Reel Scoop :movie_camera:
 ==============
 
 Key Features
