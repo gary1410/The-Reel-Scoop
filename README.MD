@@ -44,7 +44,7 @@ create
 Then copy this store the API key where it says `yourkeyhere`.
 
 ```ruby
-ROTTEN_API_KEY='yourkeyhere'
+ROTTEN_API_KEY=yourkeyhere
 ```
 
 Challenges
