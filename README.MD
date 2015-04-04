@@ -1,6 +1,9 @@
 :movie_camera: The Reel Scoop :movie_camera:
 ==============
 
+Website: [http://thereelscoop.herokuapp.com](http://thereelscoop.herokuapp.com)
+ 
+
 Key Features
 ------------
   * Users can do a live search via AJAX
@@ -27,7 +30,7 @@ rake db:seed_movies
 
 Register for an API KEY [here](http://developer.rottentomatoes.com/)
 
-http://developer.rottentomatoes.com/
+[http://developer.rottentomatoes.com/](http://developer.rottentomatoes.com/)
 
 Challenges
 ----------
