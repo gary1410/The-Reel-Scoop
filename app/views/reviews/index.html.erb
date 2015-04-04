@@ -1,0 +1,16 @@
+<table class="table table-striped">
+    <tr>
+      <th> Movie </th>
+      <th> Reviewer Email </th>
+      <th> Rating </th>
+      <th> Comment</th>
+    </tr>
+	<% @reviews.each do |review| %>
+    <tr>  
+      <td>  <%= link_to(review.movie.title, movie_path(review.movie)) %></td>
+      <td> 	<%= review.email %></td>
+      <td> 	<%= review.rating %> </td>
+      <td>  <%= review.comment if review.comment.present? %> </td>
+    </tr>
+    <% end %>
+</table>

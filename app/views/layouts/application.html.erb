@@ -6,9 +6,19 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <%= link_to "The Reel Scoop", root_path, class: "navbar-brand" %>
+        </div>
+      </div>
+    </nav>
+<div class="container">
 
 <%= yield %>
 
+</div>
 </body>
 </html>

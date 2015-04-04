@@ -1,0 +1,16 @@
+<table class="table table-striped">
+    <tr>
+      <th><%= sortable "title" %></th>
+      <th><%= sortable "release_date" %></th>
+      <th><%= sortable "genres" %></th>
+      <th></th>
+     </tr>
+	<% @movies.each do |movie| %>
+    <tr>
+      <td> <%= link_to(image_tag(movie.mob_poster_url), new_movie_review_path(movie) )%> <%=link_to(movie.title, new_movie_review_path(movie))%> </td>
+      <td> <%= movie.release_date.strftime("%B %e, %Y") %> </td>
+      <td> <%= movie.genres %> </td>
+      <td> <%= link_to("Show Reviews", movie_path(movie))%> | <%= link_to("Review Movie", new_movie_review_path(movie))%> </td>
+    </tr>
+    <% end %>
+  </table>

@@ -1,0 +1,38 @@
+
+<h1> Rate this Movie! </h1>
+
+<% if @review.errors.any? %>
+	<%= @review.errors.count %> Errors Prevented the Review from Saving
+	<ul>
+		<%= @review.errors.full_messages.each do |error_msg| %>
+			<li><%= error_msg %></li>
+		<% end %>
+	</ul>
+<% end %>
+
+<%= image_tag(@review.movie.mob_poster_url) %><br>
+<%= @review.movie.title %>
+
+<ul>
+<%= form_for [@review.movie, @review], html: {class: "form-horizontal"} do |f| %>
+<li>
+	<%= f.hidden_field :movie_id %>
+	<%= f.label :email %>
+	<li><%= f.text_field :email, class: "form-control-sm", placeholder: "Email" %><br>
+	<span>Rating</span>
+	<%= f.radio_button :rating, 1 %>
+	<%= f.label :rating, value: 1 %>
+	<%= f.radio_button :rating, 2 %>
+	<%= f.label :rating, value: 2 %>
+	<%= f.radio_button :rating, 3 %>
+	<%= f.label :rating, value: 3 %>
+	<%= f.radio_button :rating, 4 %>
+	<%= f.label :rating, value: 4 %>
+
+	<li><%=f.label :comment, raw('Comment <span>(optional)</span>') %>
+	<li><%=f.text_area :comment,  class: "form-control" %>
+
+	<li><%=f.submit "Submit Review", class: "btn btn-success" %>
+
+<% end %> 
+</ul>

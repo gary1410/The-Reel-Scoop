@@ -1,0 +1,16 @@
+<h1><%= @movie.title %></h1>
+
+<table class="table table-striped">
+    <tr>
+      <th> Reviewer Email </th>
+      <th> Rating (out of 5)</th>
+      <th> Comment</th>
+    </tr>
+	<% @movie.reviews.each do |movie_review| %>
+    <tr>
+      <td> 	<%= movie_review.email %></td>
+      <td> 	<%= movie_review.rating %> out of 5 </td>
+      <td>  <%= movie_review.comment if movie_review.comment.present? %> </td>
+    </tr>
+    <% end %>
+</table>
