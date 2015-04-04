@@ -1,0 +1,30 @@
+<%= @review.movie.title %>
+
+<% if @review.errors.any? %>
+	<%= @review.errors.count %> Errors Prevented the Review from Saving
+	<ul>
+		<%= @review.errors.full_messages.each do |error_msg| %>
+			<li><%= error_msg %></li>
+		<% end %>
+	</ul>
+<% end %>
+
+<%= form_for [@review.movie, @review] do |f| %>
+	<%= f.hidden_field :movie_id %>
+	<%= f.label :email %>
+	<%= f.text_field :email %>
+	<%= f.radio_button :rating, 1 %>
+	<%= f.label :rating, value: 1 %>
+	<%= f.radio_button :rating, 2 %>
+	<%= f.label :rating, value: 2 %>
+	<%= f.radio_button :rating, 3 %>
+	<%= f.label :rating, value: 3 %>
+	<%= f.radio_button :rating, 4 %>
+	<%= f.label :rating, value: 4 %>
+
+	<%=f.label :comment, raw('Comment <span>(optional)</span>') %>
+	<%=f.text_area :comment %>
+
+	<%=f.submit "Submit Review" %>
+
+<% end %> 

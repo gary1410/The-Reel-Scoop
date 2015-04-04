@@ -1,0 +1,15 @@
+
+<h3>Movies</h3>
+  <table class="table table-striped">
+    <tr>
+      <th> Title </th>
+      <th> Release Date </th>
+      <th>  Genre </th>
+	<% @movies.each do |movie| %>
+    <tr>
+      <td> <%= link_to(image_tag(movie.mob_poster_url), new_movie_review_path(movie) )%> <%=link_to(movie.title, new_movie_review_path(movie))%> </td>
+      <td> <%= movie.release_date %> </td>
+      <td> <%= movie.genre %> </td>
+    </tr>
+    <% end %>
+  </table>

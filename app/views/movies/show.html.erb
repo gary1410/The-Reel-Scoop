@@ -1,0 +1,5 @@
+<%= @movie.reviews.each do |movie_review| %>
+	<%= movie_review.email %>
+	<%= movie_review.rating %>
+	<%= movie_review.comment if movie_review.comment.present? %>
+<% end %>
