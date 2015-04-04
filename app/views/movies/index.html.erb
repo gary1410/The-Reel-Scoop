@@ -1,3 +1,4 @@
+<h3>Movies</h3>
 
 <%= form_tag movies_path, :method => 'get', :id => "movies_search" do %>
 	<%= hidden_field_tag :direction, params[:direction] %>
@@ -8,8 +9,7 @@
   </p>
 <% end %>
 
-<h3>Movies</h3>
-  
-  <div id='movies'> <%= render 'movies' %> </div>
+<%= link_to "ALL REVIEWS", reviews_path %> 
+  <div id='movies'> <%= render partial: 'movies' %> </div>
 
   <%= will_paginate @movies %> 

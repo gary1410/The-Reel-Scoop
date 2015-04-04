@@ -15,6 +15,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rottentomatoes'
 gem 'bootstrap'
 gem 'will_paginate'
+gem 'simple_form'
 
 group :development, :test do
   gem 'spring'

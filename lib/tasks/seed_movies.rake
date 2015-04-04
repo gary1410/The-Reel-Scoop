@@ -31,8 +31,7 @@ namespace :db do
         mpaa_rating:        rt_movie_data.mpaa_rating,
         synopsis:           rt_movie_data.synopsis,
         runtime:            rt_movie_data.runtime,
-        release_date:       release_date,
-        release_status:     "limited"
+        release_date:       release_date
       })
     end
 
@@ -62,8 +61,7 @@ namespace :db do
         mpaa_rating:        rt_movie_data.mpaa_rating,
         synopsis:           rt_movie_data.synopsis,
         runtime:            rt_movie_data.runtime,
-        release_date:       release_date,
-        release_status:    "limited"
+        release_date:       release_date
       })
     end
 
@@ -90,8 +88,7 @@ namespace :db do
         mpaa_rating:        rt_movie_data.mpaa_rating,
         synopsis:           rt_movie_data.synopsis,
         runtime:            rt_movie_data.runtime,
-        release_date:       release_date,
-        release_status:     "wide"
+        release_date:       release_date
       })
     end
   end

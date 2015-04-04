@@ -1,4 +1,5 @@
-<%= @review.movie.title %>
+
+<h1> Rate this Movie! </h1>
 
 <% if @review.errors.any? %>
 	<%= @review.errors.count %> Errors Prevented the Review from Saving
@@ -9,10 +10,16 @@
 	</ul>
 <% end %>
 
-<%= form_for [@review.movie, @review] do |f| %>
+<%= image_tag(@review.movie.mob_poster_url) %><br>
+<%= @review.movie.title %>
+
+<ul>
+<%= form_for [@review.movie, @review], html: {class: "form-horizontal"} do |f| %>
+<li>
 	<%= f.hidden_field :movie_id %>
 	<%= f.label :email %>
-	<%= f.text_field :email %>
+	<li><%= f.text_field :email, class: "form-control-sm", placeholder: "Email" %><br>
+	<span>Rating</span>
 	<%= f.radio_button :rating, 1 %>
 	<%= f.label :rating, value: 1 %>
 	<%= f.radio_button :rating, 2 %>
@@ -22,9 +29,10 @@
 	<%= f.radio_button :rating, 4 %>
 	<%= f.label :rating, value: 4 %>
 
-	<%=f.label :comment, raw('Comment <span>(optional)</span>') %>
-	<%=f.text_area :comment %>
+	<li><%=f.label :comment, raw('Comment <span>(optional)</span>') %>
+	<li><%=f.text_area :comment,  class: "form-control" %>
 
-	<%=f.submit "Submit Review" %>
+	<li><%=f.submit "Submit Review", class: "btn btn-success" %>
 
 <% end %> 
+</ul>
