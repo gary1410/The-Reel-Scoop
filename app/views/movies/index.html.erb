@@ -9,19 +9,7 @@
 <% end %>
 
 <h3>Movies</h3>
-  <table class="table table-striped">
-    <tr>
-      <th><%= sortable "title" %></th>
-      <th><%= sortable "release_date" %></th>
-      <th><%= sortable "genres" %></th>
-     </tr>
-	<% @movies.each do |movie| %>
-    <tr>
-      <td> <%= link_to(image_tag(movie.mob_poster_url), new_movie_review_path(movie) )%> <%=link_to(movie.title, new_movie_review_path(movie))%> </td>
-      <td> <%= movie.release_date.strftime("%B %e, %Y") %> </td>
-      <td> <%= movie.genres %> </td>
-    </tr>
-    <% end %>
-  </table>
+  
+  <div id='movies'> <%= render 'movies' %> </div>
 
   <%= will_paginate @movies %> 
