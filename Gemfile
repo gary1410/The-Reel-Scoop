@@ -17,6 +17,7 @@ gem 'will_paginate'
 gem 'simple_form'
 gem 'analytics-ruby', '~> 2.0.0', :require => 'segment/analytics'
 gem 'devise'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'spring'
