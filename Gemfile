@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 
-
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'rails', '4.2.0'
 gem 'pg'
@@ -16,6 +15,8 @@ gem 'rottentomatoes'
 gem 'bootstrap'
 gem 'will_paginate'
 gem 'simple_form'
+gem 'analytics-ruby', '~> 2.0.0', :require => 'segment/analytics'
+gem 'devise'
 
 group :development, :test do
   gem 'spring'
@@ -25,6 +26,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem 'shoulda-matchers'
+  gem 'pry-rails'
 end
 
 group :development do
